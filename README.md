@@ -31,7 +31,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@esm/index.mjs';
+import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@v0.0.1-esm/index.mjs';
 ```
 
 #### duration2ms( str )
@@ -82,7 +82,7 @@ ms = duration2ms( '1d2h3m4s5ms' );
 <body>
 <script type="module">
 
-import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@esm/index.mjs';
+import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@v0.0.1-esm/index.mjs';
 
 var ms = duration2ms( '5s20ms' );
 // returns 5020
