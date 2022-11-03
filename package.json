@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/time-duration2ms",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Convert a duration string to milliseconds.",
   "license": "Apache-2.0",
   "author": {
