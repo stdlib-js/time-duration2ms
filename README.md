@@ -31,7 +31,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@deno/mod.js';
+import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@v0.0.1-deno/mod.js';
 ```
 
 #### duration2ms( str )
@@ -77,7 +77,7 @@ ms = duration2ms( '1d2h3m4s5ms' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@deno/mod.js';
+import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@v0.0.1-deno/mod.js';
 
 var ms = duration2ms( '5s20ms' );
 // returns 5020
