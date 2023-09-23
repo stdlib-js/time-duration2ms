@@ -18,25 +18,114 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # duration2ms
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Convert a duration string to milliseconds.
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/time-duration2ms
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+</section>
 
+<section class="usage">
 
+## Usage
 
+```javascript
+var duration2ms = require( '@stdlib/time-duration2ms' );
+```
+
+#### duration2ms( str )
+
+Converts a duration string to milliseconds.
+
+```javascript
+var ms = duration2ms( '1d' );
+// returns 86400000
+
+ms = duration2ms( '1d2h3m4s5ms' );
+// returns 93784005
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   A duration string is a string containing a sequence of time units. A time unit is a nonnegative integer followed by a unit identifier. The following unit identifiers are supported:
+
+    -   `d`: days
+    -   `h`: hours
+    -   `m`: minutes
+    -   `s`: seconds
+    -   `ms`: milliseconds
+
+    For example, the string `1m3s10ms` is a duration string containing three time units: `1m` (1 minute), `3s` (3 seconds), and `10ms` (10 milliseconds). The string `60m` is a duration string containing a single time unit: `60m` (60 minutes).
+
+-   Duration strings are case insensitive. For example, the string `1M3S10MS` is equivalent to `1m3s10ms`.
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var duration2ms = require( '@stdlib/time-duration2ms' );
+
+var ms = duration2ms( '5s20ms' );
+// returns 5020
+
+ms = duration2ms( '1h' );
+// returns 3600000
+
+ms = duration2ms( '1m2s3ms' );
+// returns 62003
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -54,7 +143,7 @@ npm install -g @stdlib/time-duration2ms-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: duration2ms [options] [<string>]
@@ -74,7 +163,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -94,7 +183,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ duration2ms 1s
@@ -129,11 +218,6 @@ $ echo -n '1s350ms,2s' | duration2ms --split ','
 
 <section class="related">
 
-## See Also
-
--   <span class="package-name">[`@stdlib/time-duration2ms`][@stdlib/time-duration2ms]</span><span class="delimiter">: </span><span class="description">convert a duration string to milliseconds.</span>
-
-
 <!-- /.related -->
 
 <!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
@@ -149,7 +233,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -172,11 +256,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/time-duration2ms-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/time-duration2ms-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/time-duration2ms.svg
+[npm-url]: https://npmjs.org/package/@stdlib/time-duration2ms
 
-[test-image]: https://github.com/stdlib-js/time-duration2ms/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/time-duration2ms/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/time-duration2ms/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/time-duration2ms/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/time-duration2ms/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/time-duration2ms?branch=main
