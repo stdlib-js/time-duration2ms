@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/time-duration2ms/tags). For example,
+
+```javascript
 import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@v0.2.3-esm/index.mjs';
 ```
 
@@ -93,7 +98,7 @@ ms = duration2ms( '1d2h3m4s5ms' );
 <body>
 <script type="module">
 
-import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@v0.2.3-esm/index.mjs';
+import duration2ms from 'https://cdn.jsdelivr.net/gh/stdlib-js/time-duration2ms@esm/index.mjs';
 
 var ms = duration2ms( '5s20ms' );
 // returns 5020
